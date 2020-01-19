@@ -6,9 +6,9 @@ class App extends React.Component {
   render() {
     return (
       <main className={styles.component}>
-        <h1 className={styles.title}>My first React app</h1>
-        <h2 className={styles.subtitle}>Hello World!</h2>
-        <List />
+        <h1 className={styles.title}>To Do List in React</h1>
+        <h2 className={styles.subtitle}>May the procrastination force be with you!!!</h2>
+        <List title={['Things to do ', <sup key='1'>someday ;)</sup>]} />
       </main>
     )
   }
