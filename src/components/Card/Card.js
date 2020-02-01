@@ -2,9 +2,9 @@
 import React from 'react';
 import styles from './Card.scss';
 
-const Card = props => (
+const Card = ({title}) => (
   <div className={styles.component}>
-    {props.title}
+    {title}
   </div>
 );
 
