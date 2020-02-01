@@ -24,4 +24,13 @@
       background: darken($color-warning, 5%);
     }
   }
+
+  &.inform {
+    background: $color-light;
+    color: $color-dark;
+    &:hover {
+      background: $color-dark;
+      color: $color-light;
+    }
+  }
 }
