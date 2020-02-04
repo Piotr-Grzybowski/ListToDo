@@ -9,8 +9,8 @@ import Creator from '../Creator/Creator';
 import Container from '../Container/Container';
 
 const List = ({title, image, description, columns, addColumn}) => (
-  <section className={styles.component}>
-    <Container>
+  <Container>
+    <section className={styles.component}>
       <Hero titleText={title} image={image} />
       <div className={styles.description}>
         {ReactHtmlParser(description)}
@@ -23,8 +23,8 @@ const List = ({title, image, description, columns, addColumn}) => (
       <div className={styles.creator}>
         <Creator text={settings.columnCreatorText} action={addColumn} />
       </div>
-    </Container>
-  </section>
+    </section>
+  </Container>
 );
 
 export default List;

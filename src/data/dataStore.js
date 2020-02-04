@@ -12,17 +12,31 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  defaultHeaderIcon: 'clipboard-list',
+};
+
+export const faq = {
+  title: 'FAQ - frequently asked questions',
+  image: 'https://i.postimg.cc/Kv2zbCW2/bag-1245954-1920.jpg',
+  subtitle: 'List of some interesting questions asked on the Internet. Enjoy',
+  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+};
+
+export const info = {
+  title: 'Why do you need a list?',
+  image: 'https://i.postimg.cc/MGYdGk6j/sticky-note-lot-1629212.jpg',
+  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
 };
 
 export const pageContents = {
-  title: 'My first React app',
-  subtitle: 'A simple to-do app, with lists, columns and cards',
+  title: 'Another to do list App',
+  subtitle: '',
 };
 
 export const listData = {
-  title: 'Things to do <sup>soon!</sup>',
+  title: 'List things to do <sup>soon!</sup>',
   description: 'Interesting things I want to check out!',
-  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  image: 'https://i.postimg.cc/vTFbh6nn/list-1925752-1280.jpg',
   columns: [
     {
       key: 0,
@@ -75,9 +89,9 @@ export const listData = {
 const lists = [
   {
     id: 'list-1',
-    title: 'Things to do <sup>soon!</sup>',
-    description: 'Interesting things I want to check out!',
-    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    title: 'List things to do <sup>soon!</sup>',
+    description: '',
+    image: 'https://i.postimg.cc/vTFbh6nn/list-1925752-1280.jpg',
   },
 ];
 
