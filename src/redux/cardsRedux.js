@@ -22,19 +22,17 @@ export default function reducer(statePart = '', action = {}) {
       return [...statePart, action.payload];
     case MOVE_CARD: {
       const {id, src, dest} = action.payload;
-      console.log(action.payload);
       const targetCard = statePart.filter(card => card.id === id)[0];
       const targetColumnCards = statePart.filter(card => card.columnId === dest.columnId).sort((a, b) => a.index - b.index);
       if(dest.columnId === src.columnId){
         targetColumnCards.splice(src.index, 1);
         targetColumnCards.splice(dest.index, 0, targetCard);
 
-        console.log('targetColumnCards:', targetCard);
-        console.log(targetColumnCards.map(card => `${card.index}, title: ${card.title}`));
+        // console.log('targetColumnCards:', targetCard);
+        // console.log(targetColumnCards.map(card => `${card.index}, title: ${card.title}`));
 
         return statePart.map(card => {
           const targetColumnIndex = targetColumnCards.indexOf(card);
-          console.log(targetColumnIndex);
           if(targetColumnIndex !== -1 && card.index !== targetColumnIndex){
             return {...card, index: targetColumnIndex};
           } else {
@@ -50,10 +48,10 @@ export default function reducer(statePart = '', action = {}) {
         // add card to targetColumn
         targetColumnCards.splice(dest.index, 0, targetCard);
 
-        console.log('sourceColumnCards:');
-        console.log(sourceColumnCards.map(card => `${card.index}, title: ${card.title}`));
-        console.log('targetColumnCards:');
-        console.log(targetColumnCards.map(card => `${card.index}, title: ${card.title}`));
+        // console.log('sourceColumnCards:');
+        // console.log(sourceColumnCards.map(card => `${card.index}, title: ${card.title}`));
+        // console.log('targetColumnCards:');
+        // console.log(targetColumnCards.map(card => `${card.index}, title: ${card.title}`));
 
         return statePart.map(card => {
           const targetColumnIndex = targetColumnCards.indexOf(card);
