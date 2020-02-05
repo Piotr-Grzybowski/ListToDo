@@ -1,20 +1,23 @@
 import React from 'react';
+import Home from '../Home/HomeContainer';
+import Info from '../Info/Info';
+import {BrowserRouter, Route} from 'react-router-dom';
+import MainLayouts from '../MainLayouts/MainLayouts';
+import Faq from '../FAQ/FAQ';
+import { AnimatedSwitch } from 'react-router-transition';
 import styles from './App.scss';
-import PropTypes from 'prop-types';
 import List from '../List/ListContainer';
-import Search from '../Search/SearchContainer';
 import { DragDropContext } from 'react-beautiful-dnd';
+import PropTypes from 'prop-types';
+import SearchResults from '../SearchResults/SearchResultsContainer';
 
 class App extends React.Component {
   static propTypes = {
-    title: PropTypes.node,
-    subtitle: PropTypes.node,
-    lists: PropTypes.array,
     moveCard: PropTypes.func,
   }
-
-  render() {
-    const {title, subtitle, lists, moveCard} = this.props;
+  
+  render () {
+    const { moveCard } = this.props;
     const moveCardHandler = result => {
       if(
         result.destination
@@ -38,17 +41,28 @@ class App extends React.Component {
         });
       }
     };
+
     return (
-      <main className={styles.component}>
-        <h1 className={styles.title}>{title}</h1>
-        <h2 className={styles.subtitle}>{subtitle}</h2>
-        <Search />
+      <BrowserRouter>
         <DragDropContext onDragEnd={moveCardHandler}>
-          {lists.map(listData => (
-            <List key={listData.id} {...listData} />
-          ))}
+          <MainLayouts>
+          
+            <AnimatedSwitch
+              atEnter={{ opacity: 0 }}
+              atLeave={{ opacity: 0 }}
+              atActive={{ opacity: 1 }}
+              className={styles.switchWrapper}
+            >
+              <Route exact path='/' component={Home} />
+              <Route exact path='/info' component={Info} />
+              <Route exact path='/faq' component={Faq} />
+              <Route exact path='/list/:id' component={List} />
+              <Route exavt path='/search/:searchString' component={SearchResults} />
+            </AnimatedSwitch>
+          
+          </MainLayouts>
         </DragDropContext>
-      </main>
+      </BrowserRouter>
     );
   }
 }
