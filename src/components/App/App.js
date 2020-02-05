@@ -9,6 +9,7 @@ import styles from './App.scss';
 import List from '../List/ListContainer';
 import { DragDropContext } from 'react-beautiful-dnd';
 import PropTypes from 'prop-types';
+import SearchResults from '../SearchResults/SearchResultsContainer';
 
 class App extends React.Component {
   static propTypes = {
@@ -43,8 +44,9 @@ class App extends React.Component {
 
     return (
       <BrowserRouter>
-        <MainLayouts>
-          <DragDropContext onDragEnd={moveCardHandler}>
+        <DragDropContext onDragEnd={moveCardHandler}>
+          <MainLayouts>
+          
             <AnimatedSwitch
               atEnter={{ opacity: 0 }}
               atLeave={{ opacity: 0 }}
@@ -55,9 +57,11 @@ class App extends React.Component {
               <Route exact path='/info' component={Info} />
               <Route exact path='/faq' component={Faq} />
               <Route exact path='/list/:id' component={List} />
+              <Route exavt path='/search/:searchString' component={SearchResults} />
             </AnimatedSwitch>
-          </DragDropContext>
-        </MainLayouts>
+          
+          </MainLayouts>
+        </DragDropContext>
       </BrowserRouter>
     );
   }
