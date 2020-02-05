@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Column.scss';
+import styles from './SearchResults.scss';
 import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 import Card from '../Card/Card';
