@@ -6,6 +6,7 @@ import Card from '../Card/Card';
 import { searchResultsContent } from '../../data/dataStore';
 import { Droppable } from 'react-beautiful-dnd';
 import {withRouter} from 'react-router';
+import Container from '../Container/Container';
 
 class SearchResults extends React.Component {
   static propTypes = {
@@ -26,31 +27,38 @@ class SearchResults extends React.Component {
     }
   }
 
+  componentDidUpdate() {
+    const stringToSearch = this.props.location.pathname.split(new RegExp('/search/'))[1];
+    this.props.changeSearchString(stringToSearch);
+  }
+
   render () {
     const {foundCards, searchString, changeSearchString} = this.props;
     return (
-      <section className={styles.component} onChange={changeSearchString}>
-        <h3 className={styles.title}>
-          {searchResultsContent.title + '"' + searchString + '"'}
-          <span className={styles.icon}>
-            <Icon name={searchResultsContent.icon}/>
-          </span>
-        </h3>
-        <Droppable droppableId="none">
-          {provided => (
-            <div
-              className={styles.cards}
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-            >
-              {foundCards.map(cardData => (
-                <Card key={cardData.id} {...cardData} />
-              ))}
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
-      </section>
+      <Container>
+        <section className={styles.component} onChange={changeSearchString}>
+          <h3 className={styles.title}>
+            {searchResultsContent.title + '"' + searchString + '"'}
+            <span className={styles.icon}>
+              <Icon name={searchResultsContent.icon}/>
+            </span>
+          </h3>
+          <Droppable droppableId="none">
+            {provided => (
+              <div
+                className={styles.cards}
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+              >
+                {foundCards.map(cardData => (
+                  <Card key={cardData.id} {...cardData} />
+                ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </section>
+      </Container>
     );
   }}
 
