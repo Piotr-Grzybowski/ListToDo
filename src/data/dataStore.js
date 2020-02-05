@@ -93,6 +93,18 @@ const lists = [
     description: '',
     image: 'https://i.postimg.cc/vTFbh6nn/list-1925752-1280.jpg',
   },
+  {
+    id: 'list-2',
+    title: 'List things to do <sup>later!</sup>',
+    description: '',
+    image: 'https://i.postimg.cc/KYPKtFwJ/workshop-2209239-1920.jpg',
+  },
+  {
+    id: 'list-3',
+    title: 'List things to do <sup>one day!</sup>',
+    description: '',
+    image: 'https://i.postimg.cc/Twd8Dm4P/coffee-creative-notebook-office-64769.jpg',
+  },
 ];
 
 const columns = [
