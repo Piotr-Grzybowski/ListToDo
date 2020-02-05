@@ -57,7 +57,7 @@ class App extends React.Component {
               <Route exact path='/info' component={Info} />
               <Route exact path='/faq' component={Faq} />
               <Route exact path='/list/:id' component={List} />
-              <Route exavt path='/search/:searchString' component={SearchResults} />
+              <Route exact path='/search/:searchString' component={SearchResults} />
             </AnimatedSwitch>
           
           </MainLayouts>
