@@ -27,11 +27,6 @@ class SearchResults extends React.Component {
     }
   }
 
-  componentDidUpdate() {
-    const stringToSearch = this.props.location.pathname.split(new RegExp('/search/'))[1];
-    this.props.changeSearchString(stringToSearch);
-  }
-
   render () {
     const {foundCards, searchString, changeSearchString} = this.props;
     return (
