@@ -9,7 +9,7 @@ import { Droppable } from 'react-beautiful-dnd';
 
 
 
-const Column = ({title, icon, cards, addCard, id}) => (
+const Column = ({title, icon, cards, addCard, removeCard, id}) => (
   <section className={styles.component}>
     <h3 className={styles.title}>
       {title}
@@ -25,7 +25,7 @@ const Column = ({title, icon, cards, addCard, id}) => (
           ref={provided.innerRef}
         >
           {cards.sort((a, b) => (a.index - b.index)).map(cardData => (
-            <Card key={cardData.id} {...cardData} />
+            <Card key={cardData.id} {...cardData} remove={removeCard} />
           ))}
           {provided.placeholder}
         </div>
@@ -43,6 +43,7 @@ Column.propTypes = {
   icon: PropTypes.string,
   id: PropTypes.string,
   addCard: PropTypes.func,
+  removeCard: PropTypes.func,
 };
 
 Column.defaultProps = {
