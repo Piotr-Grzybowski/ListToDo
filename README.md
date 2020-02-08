@@ -16,6 +16,8 @@
 - website faq with commonly asked questions // TODO questions yet
 - connected database // TODO(firebase)
 
+<img src="https://i.postimg.cc/8C51zLtC/Zrzut-ekranu-z-2020-02-08-15-35-09.png">
+
 ## Setup the project
 ### From the repo locally:
 - first clone this repository
