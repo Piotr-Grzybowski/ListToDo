@@ -16,8 +16,8 @@
 - website faq with commonly asked questions // TODO questions yet
 - connected database // TODO(firebase)
 
-## Runing the project locally
-### From the repo:
+## Setup the project
+### From the repo locally:
 - first clone this repository
 ```shell
 git copy https://github.com/JohnGIDoe/ListToDo/
@@ -33,6 +33,14 @@ npm start
 ### Live version:
 <a href="https://glacial-sierra-63356.herokuapp.com/">ListToDo</a>
 
+## Technologies:
+- Webpack 4.29.6
+- React 16.7.0
+- Redux 4.0.1
+- React-router-dom 5.0.0
+- JavaScript ES6
+- Sass
+
 ## Dev Dependencies
 - React-dom
 - React-beautiful-dnd
@@ -47,18 +55,12 @@ npm start
 - http-server
 - prop-types
 
+## Sources
+Project done during the trainig programme on <a href="www.kodilla.com">Kodilla.com</a>. Starting materials for this prohject were delivered by the training provider.
+
 ## Support
 
 Reach out to me at one of the following places!
 
-- Website at <a href="http://fvcproductions.com" target="_blank">`fvcproductions.com`</a>
-- Twitter at <a href="http://twitter.com/fvcproductions" target="_blank">`@fvcproductions`</a>
-- Insert more social links here.
+- Twitter at <a href="https://twitter.com/grzybek6" target="_blank">`@fvcproductions`</a>
 
-
-## License
-
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
