@@ -64,5 +64,5 @@ Project done during the trainig programme on <a href="www.kodilla.com">Kodilla.c
 
 Reach out to me at one of the following places!
 
-- Twitter at <a href="https://twitter.com/grzybek6" target="_blank">`@fvcproductions`</a>
+- Twitter at <a href="https://twitter.com/grzybek6" target="_blank">`Piotr Grzybowski`</a>
 
