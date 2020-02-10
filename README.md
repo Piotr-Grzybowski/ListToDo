@@ -22,7 +22,7 @@
 ### From the repo locally:
 - first clone this repository
 ```shell
-git copy https://github.com/JohnGIDoe/ListToDo/
+git clone https://github.com/JohnGIDoe/ListToDo/
 ```
 - install all dependencies npm install
 ``` shell 
