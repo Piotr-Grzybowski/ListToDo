@@ -58,7 +58,7 @@ npm start
 - prop-types
 
 ## Sources
-Project done during the trainig programme on <a href="www.kodilla.com">Kodilla.com</a>. Starting materials for this prohject were delivered by the training provider.
+Project done during the trainig programme on <a href="www.kodilla.com">Kodilla.com</a>. Starting materials for this project were delivered by the training provider.
 
 ## Support
 
